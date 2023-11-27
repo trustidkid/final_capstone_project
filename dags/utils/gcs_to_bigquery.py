@@ -18,11 +18,12 @@ def gcs_to_bigquery(bucket_name, file_path):
     file_path = file_path  # os.getenv['GCP_file'] #'car_sale'
    
     # Specify BigQuery dataset and table
-    dataset_id = os.getenv['DATA_SET']
-    table_id = 'car_sale'
+    dataset_id = "fema_disaster" #os.getenv['DATA_SET']
+    table_id = 'disasters'
 
     # Construct the GCS URI
     uri = f'gs://{bucket_name}/{file_path}'
+    # uri = f'gs://us_car_sale/car_sale'
 
     # Configure the load job
     job_config = bigquery.LoadJobConfig(
@@ -31,11 +32,11 @@ def gcs_to_bigquery(bucket_name, file_path):
         autodetect=True,  # Set to False if you have a schema defined
     )
     print("********* connected to bigquery succesfully  **************")
-    # # Load data from GCS to BigQuery
-    # load_job = client.load_table_from_uri(uri, dataset_id + '.' + table_id, job_config=job_config)
+    # Load data from GCS to BigQuery
+    load_job = client.load_table_from_uri(uri, dataset_id + '.' + table_id, job_config=job_config)
 
-    # # Wait for the job to complete
-    # load_job.result()
+    # Wait for the job to complete
+    load_job.result()
 
-    # # Print the result
-    # print(f'Loaded {load_job.output_rows} rows to {dataset_id}.{table_id}')
+    # Print the result
+    print(f'Loaded {load_job.output_rows} rows to {dataset_id}.{table_id}')
