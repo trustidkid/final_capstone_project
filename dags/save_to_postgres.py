@@ -22,20 +22,20 @@ PG_PORT = os.getenv('PG_PORT')
 PG_DATABASE = os.getenv('PG_DATABASE')
 SOCRATA_APP_TOKEN = os.getenv('SOCRATA_APP_TOKEN')
 
-BUCKET_NAME = "us_car_sale" #os.getenv['GCP_GCS_BUCKET']
-FILE_PATH = "car_sale" #os.getenv['GCP_file'] #'car_sale'
+BUCKET_NAME =  os.getenv('GCP_GCS_BUCKET')
+FILE_PATH = os.getenv('GCP_FILE')
 
 # URL_PREFIX = 'https://car-api2.p.rapidapi.com/api/vin/1GTG6CEN0L1139305'
-URL_PREFIX = 'https://aerodatabox.p.rapidapi.com/airports/%7BcodeType%7D/LHR'
+# URL_PREFIX = 'https://aerodatabox.p.rapidapi.com/airports/%7BcodeType%7D/LHR'
 
 APP_TOKEN = SOCRATA_APP_TOKEN
 
-URL_PREFIX = "https://opendata.utah.gov/resource/52ez-jvug.json"
+URL_PREFIX = "https://opendata.utah.gov/resource/52ez-jvug.json?"
 
 API_KEY = os.getenv('API_KEY')
 API_HOST = os.getenv('API_HOST')
 
-URL_BUILD = URL_PREFIX #+ ',' + 'headers={X-App-Token='+ APP_TOKEN + '}'
+URL_BUILD = URL_PREFIX  #+ '$$app_token='+  APP_TOKEN # ',' + 'headers={X-App-Token='+ APP_TOKEN + '}'
 # URL_BUILD = URL_PREFIX + ',' + 'headers={' + '"X-RapidAPI-Key:"'+ API_KEY + ',' + '"X-RapidAPI-Host:"' + API_HOST +'}'
 
 URL_TEMPLATE = URL_BUILD
@@ -45,7 +45,7 @@ OUTPUT_FILE_TEMPLATE = AIRFLOW_HOME + '/output.json'
 
 # TABLE_NAME_TEMPLATE = 'us_car_list'
 
-TABLE_NAME_TEMPLATE = 'disaster_record'
+TABLE_NAME_TEMPLATE = 'disasters'
 
 
 
@@ -61,8 +61,8 @@ DEFAULT_ARGS = {
 }
 
 with DAG(
-    dag_id="LoadDataWebToDB",
-    description="Job to move data from rapidapi to local Postgresql DB",
+    dag_id="LoadDataFromWebToDB",
+    description="Job to move data from socrata website to local Postgresql DB",
     default_args=DEFAULT_ARGS,
     schedule_interval="0 6 2 * *", # At 06:00 on day 2 of every month
     max_active_runs=1,
@@ -81,10 +81,6 @@ with DAG(
         task_id ="ingestion_data",
         python_callable=db_connection,
         op_kwargs=dict(
-            # user=PG_USER,
-            # password=PG_PASSWORD,
-            # host=PG_HOST,
-            # port=PG_PORT,
             db=PG_DATABASE,
             table_name=TABLE_NAME_TEMPLATE,
             json_file=OUTPUT_FILE_TEMPLATE
@@ -108,6 +104,13 @@ with DAG(
             table_name=TABLE_NAME_TEMPLATE
         )
     )
+
+    # load_to_gcs = BashOperator(
+    #     task_id = "loadtoGCS",
+    #     bash_command = f'pg_dump -h {PG_HOST} -U {PG_USER} -d {PG_DATABASE} -t {TABLE_NAME_TEMPLATE} --format=table --file={FILE_PATH}'
+    #     # pg_dump -h your_postgres_host -U your_user -d your_database -t your_table --format=csv --file=your_table_data.csv
+
+    # )
 
     #load data from gsc to bigquery
     gcs_bigquery = PythonOperator(
