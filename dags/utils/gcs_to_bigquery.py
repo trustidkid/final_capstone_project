@@ -18,7 +18,7 @@ def gcs_to_bigquery(bucket_name, file_path):
     file_path = file_path  # os.getenv['GCP_file'] #'car_sale'
    
     # Specify BigQuery dataset and table
-    dataset_id = "fema_disaster" #os.getenv['DATA_SET']
+    dataset_id =  os.getenv('DATE_SET')
     table_id = 'disasters'
 
     # Construct the GCS URI

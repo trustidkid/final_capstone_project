@@ -27,8 +27,8 @@ def to_gcs(user, password, host, db, table_name ):
     client = storage.Client.from_service_account_json(absolute_path)
 
     # GCS bucket and destination file name
-    bucket_name = 'us-car-sale'
-    blob_name = 'car-sale' 
+    bucket_name = os.getenv('GCP_GCS_BUCKET')
+    blob_name = os.getenv('GCP_FILE')
 
     # Upload data to GCS
     bucket = client.get_bucket(bucket_name)
