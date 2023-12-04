@@ -1,0 +1,1009 @@
+[0m17:22:39.719802 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc1b01ab2b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc1b1dc1880>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc1b1dc19a0>]}
+
+
+============================== 17:22:39.726316 | 2b1cc245-b87e-443a-99ab-0e0c464e553f ==============================
+[0m17:22:39.726316 [info ] [MainThread]: Running with dbt=1.6.3
+[0m17:22:39.727163 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/semiubiliaminu/.dbt', 'fail_fast': 'False', 'warn_error': 'None', 'log_path': '/Users/semiubiliaminu/my_folder/microclick/altschool_project/final_capstone_project/fema_disaster_dbt/fema_disaster/logs', 'debug': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'static_parser': 'True', 'log_format': 'default', 'target_path': 'None', 'invocation_command': 'dbt debug', 'send_anonymous_usage_stats': 'True'}
+[0m17:22:39.727940 [info ] [MainThread]: dbt version: 1.6.3
+[0m17:22:39.728443 [info ] [MainThread]: python version: 3.9.13
+[0m17:22:39.728926 [info ] [MainThread]: python path: /Users/semiubiliaminu/opt/anaconda3/bin/python
+[0m17:22:39.729437 [info ] [MainThread]: os info: macOS-10.16-x86_64-i386-64bit
+[0m17:22:46.369217 [info ] [MainThread]: Using profiles dir at /Users/semiubiliaminu/.dbt
+[0m17:22:46.369916 [info ] [MainThread]: Using profiles.yml file at /Users/semiubiliaminu/.dbt/profiles.yml
+[0m17:22:46.370506 [info ] [MainThread]: Using dbt_project.yml file at /Users/semiubiliaminu/my_folder/microclick/altschool_project/final_capstone_project/fema_disaster_dbt/fema_disaster/dbt_project.yml
+[0m17:22:46.372828 [info ] [MainThread]: adapter type: bigquery
+[0m17:22:46.373430 [info ] [MainThread]: adapter version: 1.6.0
+[0m17:22:46.396591 [info ] [MainThread]: Configuration:
+[0m17:22:46.397254 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m17:22:46.397706 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m17:22:46.398144 [info ] [MainThread]: Required dependencies:
+[0m17:22:46.399019 [debug] [MainThread]: Executing "git --help"
+[0m17:22:46.513580 [debug] [MainThread]: STDOUT: "b"usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   reset      Reset current HEAD to the specified state\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   branch     List, create, or delete branches\n   checkout   Switch branches or restore working tree files\n   commit     Record changes to the repository\n   diff       Show changes between commits, commit and working tree, etc\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   tag        Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\n""
+[0m17:22:46.515442 [debug] [MainThread]: STDERR: "b''"
+[0m17:22:46.516200 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m17:22:46.516895 [info ] [MainThread]: Connection:
+[0m17:22:46.517719 [info ] [MainThread]:   method: oauth
+[0m17:22:46.518339 [info ] [MainThread]:   database: adeairflow
+[0m17:22:46.518882 [info ] [MainThread]:   execution_project: adeairflow
+[0m17:22:46.519483 [info ] [MainThread]:   schema: fema_disaster
+[0m17:22:46.520122 [info ] [MainThread]:   location: US
+[0m17:22:46.520686 [info ] [MainThread]:   priority: interactive
+[0m17:22:46.521307 [info ] [MainThread]:   maximum_bytes_billed: None
+[0m17:22:46.522380 [info ] [MainThread]:   impersonate_service_account: None
+[0m17:22:46.522991 [info ] [MainThread]:   job_retry_deadline_seconds: None
+[0m17:22:46.523703 [info ] [MainThread]:   job_retries: 1
+[0m17:22:46.524290 [info ] [MainThread]:   job_creation_timeout_seconds: None
+[0m17:22:46.524910 [info ] [MainThread]:   job_execution_timeout_seconds: 300
+[0m17:22:46.525485 [info ] [MainThread]:   keyfile: None
+[0m17:22:46.526163 [info ] [MainThread]:   keyfile_json: None
+[0m17:22:46.526689 [info ] [MainThread]:   timeout_seconds: 300
+[0m17:22:46.527229 [info ] [MainThread]:   token: None
+[0m17:22:46.527736 [info ] [MainThread]:   refresh_token: None
+[0m17:22:46.528295 [info ] [MainThread]:   client_id: None
+[0m17:22:46.528803 [info ] [MainThread]:   client_secret: None
+[0m17:22:46.529331 [info ] [MainThread]:   token_uri: None
+[0m17:22:46.529805 [info ] [MainThread]:   dataproc_region: None
+[0m17:22:46.530270 [info ] [MainThread]:   dataproc_cluster_name: None
+[0m17:22:46.530745 [info ] [MainThread]:   gcs_bucket: None
+[0m17:22:46.531305 [info ] [MainThread]:   dataproc_batch: None
+[0m17:22:46.532060 [info ] [MainThread]: Registered adapter: bigquery=1.6.0
+[0m17:22:46.656905 [debug] [MainThread]: Acquiring new bigquery connection 'debug'
+[0m17:22:46.659925 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m17:22:54.008462 [debug] [MainThread]: On debug: select 1 as id
+[0m17:22:56.303776 [debug] [MainThread]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=adeairflow&j=bq:US:373f1f48-cc09-4405-b862-5ff62c923845&page=queryresults
+[0m17:22:57.162250 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m17:22:57.162943 [info ] [MainThread]: [32mAll checks passed![0m
+[0m17:22:57.164353 [debug] [MainThread]: Command `dbt debug` succeeded at 17:22:57.163727 after 17.48 seconds
+[0m17:22:57.165076 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m17:22:57.165663 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc1b01ab2b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc1b6072310>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc1b60721c0>]}
+[0m17:22:57.166320 [debug] [MainThread]: Flushing usage events
+[0m22:39:59.635912 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fcd142d4fa0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fcd15ee19d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fcd15ee1d00>]}
+
+
+============================== 22:39:59.653984 | e14f1ec6-3282-4974-baeb-aa1f7ecefef3 ==============================
+[0m22:39:59.653984 [info ] [MainThread]: Running with dbt=1.6.3
+[0m22:39:59.655327 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'profiles_dir': '/Users/semiubiliaminu/.dbt', 'log_path': '/Users/semiubiliaminu/my_folder/microclick/altschool_project/final_capstone_project/fema_disaster_dbt/fema_disaster/logs', 'debug': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'invocation_command': 'dbt run', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m22:40:09.145839 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'e14f1ec6-3282-4974-baeb-aa1f7ecefef3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fcd19f10dc0>]}
+[0m22:40:09.161209 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'e14f1ec6-3282-4974-baeb-aa1f7ecefef3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fcd19f415b0>]}
+[0m22:40:09.163465 [info ] [MainThread]: Registered adapter: bigquery=1.6.0
+[0m22:40:09.260384 [debug] [MainThread]: checksum: 800ab10c53db38b54e69cd328777f0c48b6374b8a89466e8ff54aa9acb452b75, vars: {}, profile: , target: , version: 1.6.3
+[0m22:40:09.284339 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m22:40:09.285222 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'e14f1ec6-3282-4974-baeb-aa1f7ecefef3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fcd19f56220>]}
+[0m22:40:10.664644 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'e14f1ec6-3282-4974-baeb-aa1f7ecefef3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fcd1a2e90d0>]}
+[0m22:40:10.694916 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'e14f1ec6-3282-4974-baeb-aa1f7ecefef3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fcd1a2e9880>]}
+[0m22:40:10.695772 [info ] [MainThread]: Found 3 models, 4 tests, 0 sources, 0 exposures, 0 metrics, 390 macros, 0 groups, 0 semantic models
+[0m22:40:10.696330 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'e14f1ec6-3282-4974-baeb-aa1f7ecefef3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fcd19f56e20>]}
+[0m22:40:10.698477 [info ] [MainThread]: 
+[0m22:40:10.699587 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m22:40:10.701669 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_adeairflow'
+[0m22:40:10.702836 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m22:40:20.405507 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_adeairflow, now list_adeairflow_fema_disaster)
+[0m22:40:20.407012 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m22:40:21.785030 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'e14f1ec6-3282-4974-baeb-aa1f7ecefef3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fcd1a2e96d0>]}
+[0m22:40:21.786839 [info ] [MainThread]: Concurrency: 60 threads (target='dev')
+[0m22:40:21.787648 [info ] [MainThread]: 
+[0m22:40:21.905711 [debug] [Thread-1  ]: Began running node model.fema_disaster.disaster_report
+[0m22:40:21.906355 [debug] [Thread-2  ]: Began running node model.fema_disaster.my_first_dbt_model
+[0m22:40:21.907200 [info ] [Thread-1  ]: 1 of 3 START sql view model fema_disaster.disaster_report ...................... [RUN]
+[0m22:40:21.912121 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly list_adeairflow_fema_disaster, now model.fema_disaster.disaster_report)
+[0m22:40:21.914456 [debug] [Thread-1  ]: Began compiling node model.fema_disaster.disaster_report
+[0m22:40:21.908246 [info ] [Thread-2  ]: 2 of 3 START sql table model fema_disaster.my_first_dbt_model .................. [RUN]
+[0m22:40:21.931025 [debug] [Thread-2  ]: Acquiring new bigquery connection 'model.fema_disaster.my_first_dbt_model'
+[0m22:40:21.931790 [debug] [Thread-2  ]: Began compiling node model.fema_disaster.my_first_dbt_model
+[0m22:40:21.943759 [debug] [Thread-1  ]: Writing injected SQL for node "model.fema_disaster.disaster_report"
+[0m22:40:21.947829 [debug] [Thread-2  ]: Writing injected SQL for node "model.fema_disaster.my_first_dbt_model"
+[0m22:40:21.949759 [debug] [Thread-2  ]: Timing info for model.fema_disaster.my_first_dbt_model (compile): 22:40:21.932237 => 22:40:21.949148
+[0m22:40:21.950368 [debug] [Thread-2  ]: Began executing node model.fema_disaster.my_first_dbt_model
+[0m22:40:22.007653 [debug] [Thread-1  ]: Timing info for model.fema_disaster.disaster_report (compile): 22:40:21.915011 => 22:40:22.006974
+[0m22:40:22.026050 [debug] [Thread-1  ]: Began executing node model.fema_disaster.disaster_report
+[0m22:40:22.036174 [debug] [Thread-2  ]: Writing runtime sql for node "model.fema_disaster.my_first_dbt_model"
+[0m22:40:22.216694 [debug] [Thread-1  ]: Writing runtime sql for node "model.fema_disaster.disaster_report"
+[0m22:40:22.217869 [debug] [Thread-2  ]: Opening a new connection, currently in state init
+[0m22:40:22.218396 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m22:40:22.218908 [debug] [Thread-2  ]: On model.fema_disaster.my_first_dbt_model: /* {"app": "dbt", "dbt_version": "1.6.3", "profile_name": "fema_disaster", "target_name": "dev", "node_id": "model.fema_disaster.my_first_dbt_model"} */
+
+  
+    
+
+    create or replace table `adeairflow`.`fema_disaster`.`my_first_dbt_model`
+      
+    
+    
+
+    OPTIONS()
+    as (
+      /*
+    Welcome to your first dbt model!
+    Did you know that you can also configure models directly within SQL files?
+    This will override configurations stated in dbt_project.yml
+
+    Try changing "table" to "view" below
+*/
+
+
+
+with source_data as (
+
+    select 1 as id
+    union all
+    select null as id
+
+)
+
+select *
+from source_data
+
+/*
+    Uncomment the line below to remove records with null `id` values
+*/
+
+-- where id is not null
+    );
+  
+[0m22:40:22.219408 [debug] [Thread-1  ]: On model.fema_disaster.disaster_report: /* {"app": "dbt", "dbt_version": "1.6.3", "profile_name": "fema_disaster", "target_name": "dev", "node_id": "model.fema_disaster.disaster_report"} */
+
+
+  create or replace view `adeairflow`.`fema_disaster`.`disaster_report`
+  OPTIONS()
+  as 
+
+with disaster_record as{
+    select * from disasters
+}
+
+select disaster_number, disaster_year
+from disaster_record
+where disaster_number > 2000;
+
+
+[0m22:40:24.812830 [debug] [Thread-1  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=adeairflow&j=bq:US:1049c136-3588-4cb7-8b74-fd0f3e1d9d8d&page=queryresults
+[0m22:40:24.815058 [debug] [Thread-1  ]: BigQuery adapter: Retry attempt 1 of 1 after error: BadRequest('Syntax error: Expected "(" but got "{" at [8:24]')
+[0m22:40:24.819517 [debug] [Thread-2  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=adeairflow&j=bq:US:70899868-ce48-4547-9bff-96d75c8f4912&page=queryresults
+[0m22:40:25.834440 [debug] [Thread-1  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=adeairflow&j=bq:US:8f5b8609-4a0c-4c2e-8252-5e474a940ee4&page=queryresults
+[0m22:40:25.835288 [error] [Thread-1  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=adeairflow&j=bq:US:8f5b8609-4a0c-4c2e-8252-5e474a940ee4&page=queryresults
+[0m22:40:25.836420 [debug] [Thread-1  ]: Timing info for model.fema_disaster.disaster_report (execute): 22:40:22.033545 => 22:40:25.836124
+[0m22:40:25.975247 [debug] [Thread-1  ]: Database Error in model disaster_report (models/staging/disaster_report.sql)
+  Syntax error: Expected "(" but got "{" at [8:24]
+  compiled Code at target/run/fema_disaster/models/staging/disaster_report.sql
+[0m22:40:25.976074 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'e14f1ec6-3282-4974-baeb-aa1f7ecefef3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fcd1a3d1490>]}
+[0m22:40:25.990034 [error] [Thread-1  ]: 1 of 3 ERROR creating sql view model fema_disaster.disaster_report ............. [[31mERROR[0m in 4.07s]
+[0m22:40:25.991735 [debug] [Thread-1  ]: Finished running node model.fema_disaster.disaster_report
+[0m22:40:28.482582 [debug] [Thread-2  ]: Timing info for model.fema_disaster.my_first_dbt_model (execute): 22:40:21.950746 => 22:40:28.482328
+[0m22:40:28.484022 [debug] [Thread-2  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'e14f1ec6-3282-4974-baeb-aa1f7ecefef3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fcd1a3d14f0>]}
+[0m22:40:28.486075 [info ] [Thread-2  ]: 2 of 3 OK created sql table model fema_disaster.my_first_dbt_model ............. [[32mCREATE TABLE (2.0 rows, 0 processed)[0m in 6.55s]
+[0m22:40:28.487738 [debug] [Thread-2  ]: Finished running node model.fema_disaster.my_first_dbt_model
+[0m22:40:28.490074 [debug] [Thread-4  ]: Began running node model.fema_disaster.my_second_dbt_model
+[0m22:40:28.491502 [info ] [Thread-4  ]: 3 of 3 START sql view model fema_disaster.my_second_dbt_model .................. [RUN]
+[0m22:40:28.493154 [debug] [Thread-4  ]: Acquiring new bigquery connection 'model.fema_disaster.my_second_dbt_model'
+[0m22:40:28.494100 [debug] [Thread-4  ]: Began compiling node model.fema_disaster.my_second_dbt_model
+[0m22:40:28.498386 [debug] [Thread-4  ]: Writing injected SQL for node "model.fema_disaster.my_second_dbt_model"
+[0m22:40:28.499996 [debug] [Thread-4  ]: Timing info for model.fema_disaster.my_second_dbt_model (compile): 22:40:28.494589 => 22:40:28.499515
+[0m22:40:28.500773 [debug] [Thread-4  ]: Began executing node model.fema_disaster.my_second_dbt_model
+[0m22:40:28.506820 [debug] [Thread-4  ]: Writing runtime sql for node "model.fema_disaster.my_second_dbt_model"
+[0m22:40:28.508171 [debug] [Thread-4  ]: Opening a new connection, currently in state init
+[0m22:40:28.508956 [debug] [Thread-4  ]: On model.fema_disaster.my_second_dbt_model: /* {"app": "dbt", "dbt_version": "1.6.3", "profile_name": "fema_disaster", "target_name": "dev", "node_id": "model.fema_disaster.my_second_dbt_model"} */
+
+
+  create or replace view `adeairflow`.`fema_disaster`.`my_second_dbt_model`
+  OPTIONS()
+  as -- Use the `ref` function to select from other models
+
+select *
+from `adeairflow`.`fema_disaster`.`my_first_dbt_model`
+where id = 1;
+
+
+[0m22:40:30.822653 [debug] [Thread-4  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=adeairflow&j=bq:US:22036149-8df0-4492-b5b3-f20713d99a26&page=queryresults
+[0m22:40:32.844725 [debug] [Thread-4  ]: Timing info for model.fema_disaster.my_second_dbt_model (execute): 22:40:28.501184 => 22:40:32.844457
+[0m22:40:32.846071 [debug] [Thread-4  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'e14f1ec6-3282-4974-baeb-aa1f7ecefef3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fcd1a1c7a90>]}
+[0m22:40:32.847013 [info ] [Thread-4  ]: 3 of 3 OK created sql view model fema_disaster.my_second_dbt_model ............. [[32mCREATE VIEW (0 processed)[0m in 4.35s]
+[0m22:40:32.849973 [debug] [Thread-4  ]: Finished running node model.fema_disaster.my_second_dbt_model
+[0m22:40:32.978026 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m22:40:32.979105 [debug] [MainThread]: Connection 'model.fema_disaster.disaster_report' was properly closed.
+[0m22:40:32.979914 [debug] [MainThread]: Connection 'model.fema_disaster.my_first_dbt_model' was properly closed.
+[0m22:40:32.982217 [debug] [MainThread]: Connection 'model.fema_disaster.my_second_dbt_model' was properly closed.
+[0m22:40:32.983506 [info ] [MainThread]: 
+[0m22:40:32.984661 [info ] [MainThread]: Finished running 2 view models, 1 table model in 0 hours 0 minutes and 22.28 seconds (22.28s).
+[0m22:40:32.988069 [debug] [MainThread]: Command end result
+[0m22:40:33.022742 [info ] [MainThread]: 
+[0m22:40:33.024121 [info ] [MainThread]: [31mCompleted with 1 error and 0 warnings:[0m
+[0m22:40:33.024985 [info ] [MainThread]: 
+[0m22:40:33.027295 [error] [MainThread]:   Database Error in model disaster_report (models/staging/disaster_report.sql)
+  Syntax error: Expected "(" but got "{" at [8:24]
+  compiled Code at target/run/fema_disaster/models/staging/disaster_report.sql
+[0m22:40:33.035032 [info ] [MainThread]: 
+[0m22:40:33.036544 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=1 SKIP=0 TOTAL=3
+[0m22:40:33.038727 [debug] [MainThread]: Command `dbt run` failed at 22:40:33.037910 after 33.49 seconds
+[0m22:40:33.040836 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fcd142d4fa0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fcd19f415b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fcd19f551f0>]}
+[0m22:40:33.066446 [debug] [MainThread]: Flushing usage events
+[0m22:41:39.750268 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe6cd2d42b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe6ceee1a60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe6ceee1d90>]}
+
+
+============================== 22:41:39.758028 | 842c65d6-c056-4c72-ac09-b57448ba5f7b ==============================
+[0m22:41:39.758028 [info ] [MainThread]: Running with dbt=1.6.3
+[0m22:41:39.759018 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'fail_fast': 'False', 'log_path': '/Users/semiubiliaminu/my_folder/microclick/altschool_project/final_capstone_project/fema_disaster_dbt/fema_disaster/logs', 'profiles_dir': '/Users/semiubiliaminu/.dbt', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt run', 'log_format': 'default', 'static_parser': 'True', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m22:41:46.039700 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '842c65d6-c056-4c72-ac09-b57448ba5f7b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe6d38334f0>]}
+[0m22:41:46.053106 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '842c65d6-c056-4c72-ac09-b57448ba5f7b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe6d3865520>]}
+[0m22:41:46.054521 [info ] [MainThread]: Registered adapter: bigquery=1.6.0
+[0m22:41:46.086181 [debug] [MainThread]: checksum: 800ab10c53db38b54e69cd328777f0c48b6374b8a89466e8ff54aa9acb452b75, vars: {}, profile: , target: , version: 1.6.3
+[0m22:41:46.217888 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m22:41:46.218682 [debug] [MainThread]: Partial parsing: updated file: fema_disaster://models/staging/disaster_report.sql
+[0m22:41:46.279684 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '842c65d6-c056-4c72-ac09-b57448ba5f7b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe6d3b840d0>]}
+[0m22:41:46.301812 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '842c65d6-c056-4c72-ac09-b57448ba5f7b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe6d3abc640>]}
+[0m22:41:46.302509 [info ] [MainThread]: Found 3 models, 4 tests, 0 sources, 0 exposures, 0 metrics, 390 macros, 0 groups, 0 semantic models
+[0m22:41:46.303035 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '842c65d6-c056-4c72-ac09-b57448ba5f7b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe6d3abc880>]}
+[0m22:41:46.304947 [info ] [MainThread]: 
+[0m22:41:46.305963 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m22:41:46.307436 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_adeairflow'
+[0m22:41:46.308243 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m22:41:52.812922 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_adeairflow, now list_adeairflow_fema_disaster)
+[0m22:41:52.814037 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m22:41:54.111644 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '842c65d6-c056-4c72-ac09-b57448ba5f7b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe6d3878310>]}
+[0m22:41:54.113241 [info ] [MainThread]: Concurrency: 60 threads (target='dev')
+[0m22:41:54.113968 [info ] [MainThread]: 
+[0m22:41:54.124068 [debug] [Thread-1  ]: Began running node model.fema_disaster.disaster_report
+[0m22:41:54.124650 [debug] [Thread-2  ]: Began running node model.fema_disaster.my_first_dbt_model
+[0m22:41:54.125392 [info ] [Thread-1  ]: 1 of 3 START sql view model fema_disaster.disaster_report ...................... [RUN]
+[0m22:41:54.126128 [info ] [Thread-2  ]: 2 of 3 START sql table model fema_disaster.my_first_dbt_model .................. [RUN]
+[0m22:41:54.127149 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly list_adeairflow_fema_disaster, now model.fema_disaster.disaster_report)
+[0m22:41:54.128063 [debug] [Thread-2  ]: Acquiring new bigquery connection 'model.fema_disaster.my_first_dbt_model'
+[0m22:41:54.128590 [debug] [Thread-1  ]: Began compiling node model.fema_disaster.disaster_report
+[0m22:41:54.129067 [debug] [Thread-2  ]: Began compiling node model.fema_disaster.my_first_dbt_model
+[0m22:41:54.146980 [debug] [Thread-1  ]: Writing injected SQL for node "model.fema_disaster.disaster_report"
+[0m22:41:54.148976 [debug] [Thread-2  ]: Writing injected SQL for node "model.fema_disaster.my_first_dbt_model"
+[0m22:41:54.150726 [debug] [Thread-1  ]: Timing info for model.fema_disaster.disaster_report (compile): 22:41:54.129433 => 22:41:54.149868
+[0m22:41:54.151643 [debug] [Thread-1  ]: Began executing node model.fema_disaster.disaster_report
+[0m22:41:54.152274 [debug] [Thread-2  ]: Timing info for model.fema_disaster.my_first_dbt_model (compile): 22:41:54.136595 => 22:41:54.152018
+[0m22:41:54.167690 [debug] [Thread-2  ]: Began executing node model.fema_disaster.my_first_dbt_model
+[0m22:41:54.205946 [debug] [Thread-2  ]: Opening a new connection, currently in state init
+[0m22:41:54.223123 [debug] [Thread-1  ]: Writing runtime sql for node "model.fema_disaster.disaster_report"
+[0m22:41:54.225113 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m22:41:54.226111 [debug] [Thread-1  ]: On model.fema_disaster.disaster_report: /* {"app": "dbt", "dbt_version": "1.6.3", "profile_name": "fema_disaster", "target_name": "dev", "node_id": "model.fema_disaster.disaster_report"} */
+
+
+  create or replace view `adeairflow`.`fema_disaster`.`disaster_report`
+  OPTIONS()
+  as 
+
+with disaster_record as (
+    select * from disasters
+)
+
+select disaster_number, disaster_year
+from disaster_record
+where disaster_number > 2000;
+
+
+[0m22:41:56.124521 [debug] [Thread-1  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=adeairflow&j=bq:US:50589279-7e1b-4d0f-b3d2-b3543de8a6f8&page=queryresults
+[0m22:41:56.137839 [debug] [Thread-1  ]: BigQuery adapter: Retry attempt 1 of 1 after error: BadRequest('Table "disasters" must be qualified with a dataset (e.g. dataset.table).')
+[0m22:41:56.151846 [debug] [Thread-2  ]: Writing runtime sql for node "model.fema_disaster.my_first_dbt_model"
+[0m22:41:56.152929 [debug] [Thread-2  ]: On model.fema_disaster.my_first_dbt_model: /* {"app": "dbt", "dbt_version": "1.6.3", "profile_name": "fema_disaster", "target_name": "dev", "node_id": "model.fema_disaster.my_first_dbt_model"} */
+
+  
+    
+
+    create or replace table `adeairflow`.`fema_disaster`.`my_first_dbt_model`
+      
+    
+    
+
+    OPTIONS()
+    as (
+      /*
+    Welcome to your first dbt model!
+    Did you know that you can also configure models directly within SQL files?
+    This will override configurations stated in dbt_project.yml
+
+    Try changing "table" to "view" below
+*/
+
+
+
+with source_data as (
+
+    select 1 as id
+    union all
+    select null as id
+
+)
+
+select *
+from source_data
+
+/*
+    Uncomment the line below to remove records with null `id` values
+*/
+
+-- where id is not null
+    );
+  
+[0m22:41:57.144264 [debug] [Thread-2  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=adeairflow&j=bq:US:3a75cb96-0dc6-400a-b11b-196a1c3e017f&page=queryresults
+[0m22:41:57.623355 [debug] [Thread-1  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=adeairflow&j=bq:US:ee44161e-9c89-4b54-827c-a0b443164ec6&page=queryresults
+[0m22:41:57.624566 [error] [Thread-1  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=adeairflow&j=bq:US:ee44161e-9c89-4b54-827c-a0b443164ec6&page=queryresults
+[0m22:41:57.625919 [debug] [Thread-1  ]: Timing info for model.fema_disaster.disaster_report (execute): 22:41:54.152753 => 22:41:57.625558
+[0m22:41:57.693374 [debug] [Thread-1  ]: Database Error in model disaster_report (models/staging/disaster_report.sql)
+  Table "disasters" must be qualified with a dataset (e.g. dataset.table).
+  compiled Code at target/run/fema_disaster/models/staging/disaster_report.sql
+[0m22:41:57.694743 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '842c65d6-c056-4c72-ac09-b57448ba5f7b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe6d3cffc70>]}
+[0m22:41:57.697784 [error] [Thread-1  ]: 1 of 3 ERROR creating sql view model fema_disaster.disaster_report ............. [[31mERROR[0m in 3.57s]
+[0m22:41:57.701145 [debug] [Thread-1  ]: Finished running node model.fema_disaster.disaster_report
+[0m22:42:00.826890 [debug] [Thread-2  ]: Timing info for model.fema_disaster.my_first_dbt_model (execute): 22:41:54.168449 => 22:42:00.826638
+[0m22:42:00.827833 [debug] [Thread-2  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '842c65d6-c056-4c72-ac09-b57448ba5f7b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe6d3b84f10>]}
+[0m22:42:00.828559 [info ] [Thread-2  ]: 2 of 3 OK created sql table model fema_disaster.my_first_dbt_model ............. [[32mCREATE TABLE (2.0 rows, 0 processed)[0m in 6.70s]
+[0m22:42:00.829379 [debug] [Thread-2  ]: Finished running node model.fema_disaster.my_first_dbt_model
+[0m22:42:00.830337 [debug] [Thread-4  ]: Began running node model.fema_disaster.my_second_dbt_model
+[0m22:42:00.831095 [info ] [Thread-4  ]: 3 of 3 START sql view model fema_disaster.my_second_dbt_model .................. [RUN]
+[0m22:42:00.832214 [debug] [Thread-4  ]: Acquiring new bigquery connection 'model.fema_disaster.my_second_dbt_model'
+[0m22:42:00.832854 [debug] [Thread-4  ]: Began compiling node model.fema_disaster.my_second_dbt_model
+[0m22:42:00.836681 [debug] [Thread-4  ]: Writing injected SQL for node "model.fema_disaster.my_second_dbt_model"
+[0m22:42:00.837919 [debug] [Thread-4  ]: Timing info for model.fema_disaster.my_second_dbt_model (compile): 22:42:00.833230 => 22:42:00.837629
+[0m22:42:00.838465 [debug] [Thread-4  ]: Began executing node model.fema_disaster.my_second_dbt_model
+[0m22:42:00.842603 [debug] [Thread-4  ]: Writing runtime sql for node "model.fema_disaster.my_second_dbt_model"
+[0m22:42:00.843807 [debug] [Thread-4  ]: Opening a new connection, currently in state init
+[0m22:42:00.844412 [debug] [Thread-4  ]: On model.fema_disaster.my_second_dbt_model: /* {"app": "dbt", "dbt_version": "1.6.3", "profile_name": "fema_disaster", "target_name": "dev", "node_id": "model.fema_disaster.my_second_dbt_model"} */
+
+
+  create or replace view `adeairflow`.`fema_disaster`.`my_second_dbt_model`
+  OPTIONS()
+  as -- Use the `ref` function to select from other models
+
+select *
+from `adeairflow`.`fema_disaster`.`my_first_dbt_model`
+where id = 1;
+
+
+[0m22:42:02.134731 [debug] [Thread-4  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=adeairflow&j=bq:US:a036e138-4ca3-498f-9a7b-70a7ba1911a2&page=queryresults
+[0m22:42:03.809669 [debug] [Thread-4  ]: Timing info for model.fema_disaster.my_second_dbt_model (execute): 22:42:00.838818 => 22:42:03.809222
+[0m22:42:03.811002 [debug] [Thread-4  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '842c65d6-c056-4c72-ac09-b57448ba5f7b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe6d3cffe50>]}
+[0m22:42:03.812021 [info ] [Thread-4  ]: 3 of 3 OK created sql view model fema_disaster.my_second_dbt_model ............. [[32mCREATE VIEW (0 processed)[0m in 2.98s]
+[0m22:42:03.813167 [debug] [Thread-4  ]: Finished running node model.fema_disaster.my_second_dbt_model
+[0m22:42:03.817642 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m22:42:03.818207 [debug] [MainThread]: Connection 'model.fema_disaster.disaster_report' was properly closed.
+[0m22:42:03.818649 [debug] [MainThread]: Connection 'model.fema_disaster.my_first_dbt_model' was properly closed.
+[0m22:42:03.819088 [debug] [MainThread]: Connection 'model.fema_disaster.my_second_dbt_model' was properly closed.
+[0m22:42:03.819927 [info ] [MainThread]: 
+[0m22:42:03.820605 [info ] [MainThread]: Finished running 2 view models, 1 table model in 0 hours 0 minutes and 17.51 seconds (17.51s).
+[0m22:42:03.821997 [debug] [MainThread]: Command end result
+[0m22:42:03.836128 [info ] [MainThread]: 
+[0m22:42:03.836851 [info ] [MainThread]: [31mCompleted with 1 error and 0 warnings:[0m
+[0m22:42:03.837700 [info ] [MainThread]: 
+[0m22:42:03.838613 [error] [MainThread]:   Database Error in model disaster_report (models/staging/disaster_report.sql)
+  Table "disasters" must be qualified with a dataset (e.g. dataset.table).
+  compiled Code at target/run/fema_disaster/models/staging/disaster_report.sql
+[0m22:42:03.839988 [info ] [MainThread]: 
+[0m22:42:03.842341 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=1 SKIP=0 TOTAL=3
+[0m22:42:03.845205 [debug] [MainThread]: Command `dbt run` failed at 22:42:03.844933 after 24.13 seconds
+[0m22:42:03.846689 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe6cd2d42b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe6d3878c70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe6d3abc670>]}
+[0m22:42:03.847763 [debug] [MainThread]: Flushing usage events
+[0m22:42:55.070724 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd3622a2fa0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd363fd5850>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd363fd59d0>]}
+
+
+============================== 22:42:55.078402 | 74203da8-7182-4a12-842d-c97ba001700d ==============================
+[0m22:42:55.078402 [info ] [MainThread]: Running with dbt=1.6.3
+[0m22:42:55.079684 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/semiubiliaminu/.dbt', 'version_check': 'True', 'debug': 'False', 'log_path': '/Users/semiubiliaminu/my_folder/microclick/altschool_project/final_capstone_project/fema_disaster_dbt/fema_disaster/logs', 'fail_fast': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'invocation_command': 'dbt run', 'static_parser': 'True', 'introspect': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m22:43:01.490277 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '74203da8-7182-4a12-842d-c97ba001700d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd3688331c0>]}
+[0m22:43:01.504243 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '74203da8-7182-4a12-842d-c97ba001700d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd368864640>]}
+[0m22:43:01.505904 [info ] [MainThread]: Registered adapter: bigquery=1.6.0
+[0m22:43:01.562966 [debug] [MainThread]: checksum: 800ab10c53db38b54e69cd328777f0c48b6374b8a89466e8ff54aa9acb452b75, vars: {}, profile: , target: , version: 1.6.3
+[0m22:43:01.699763 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m22:43:01.700840 [debug] [MainThread]: Partial parsing: updated file: fema_disaster://models/staging/disaster_report.sql
+[0m22:43:01.768829 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '74203da8-7182-4a12-842d-c97ba001700d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd368ba20d0>]}
+[0m22:43:01.803372 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '74203da8-7182-4a12-842d-c97ba001700d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd3689c6580>]}
+[0m22:43:01.804271 [info ] [MainThread]: Found 3 models, 4 tests, 0 sources, 0 exposures, 0 metrics, 390 macros, 0 groups, 0 semantic models
+[0m22:43:01.804869 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '74203da8-7182-4a12-842d-c97ba001700d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd3689c67c0>]}
+[0m22:43:01.807126 [info ] [MainThread]: 
+[0m22:43:01.808400 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m22:43:01.810074 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_adeairflow'
+[0m22:43:01.811091 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m22:43:06.526612 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_adeairflow, now list_adeairflow_fema_disaster)
+[0m22:43:06.527668 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m22:43:08.049768 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '74203da8-7182-4a12-842d-c97ba001700d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd368b84160>]}
+[0m22:43:08.053425 [info ] [MainThread]: Concurrency: 60 threads (target='dev')
+[0m22:43:08.054119 [info ] [MainThread]: 
+[0m22:43:08.079909 [debug] [Thread-1  ]: Began running node model.fema_disaster.disaster_report
+[0m22:43:08.082054 [info ] [Thread-1  ]: 1 of 3 START sql view model fema_disaster.disaster_report ...................... [RUN]
+[0m22:43:08.084021 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly list_adeairflow_fema_disaster, now model.fema_disaster.disaster_report)
+[0m22:43:08.084988 [debug] [Thread-1  ]: Began compiling node model.fema_disaster.disaster_report
+[0m22:43:08.086334 [debug] [Thread-2  ]: Began running node model.fema_disaster.my_first_dbt_model
+[0m22:43:08.113282 [info ] [Thread-2  ]: 2 of 3 START sql table model fema_disaster.my_first_dbt_model .................. [RUN]
+[0m22:43:08.114819 [debug] [Thread-2  ]: Acquiring new bigquery connection 'model.fema_disaster.my_first_dbt_model'
+[0m22:43:08.115711 [debug] [Thread-2  ]: Began compiling node model.fema_disaster.my_first_dbt_model
+[0m22:43:08.122252 [debug] [Thread-2  ]: Writing injected SQL for node "model.fema_disaster.my_first_dbt_model"
+[0m22:43:08.127242 [debug] [Thread-1  ]: Writing injected SQL for node "model.fema_disaster.disaster_report"
+[0m22:43:08.130537 [debug] [Thread-1  ]: Timing info for model.fema_disaster.disaster_report (compile): 22:43:08.088307 => 22:43:08.129814
+[0m22:43:08.131609 [debug] [Thread-1  ]: Began executing node model.fema_disaster.disaster_report
+[0m22:43:08.151878 [debug] [Thread-2  ]: Timing info for model.fema_disaster.my_first_dbt_model (compile): 22:43:08.116306 => 22:43:08.144458
+[0m22:43:08.158476 [debug] [Thread-2  ]: Began executing node model.fema_disaster.my_first_dbt_model
+[0m22:43:08.250786 [debug] [Thread-2  ]: Opening a new connection, currently in state init
+[0m22:43:08.266576 [debug] [Thread-1  ]: Writing runtime sql for node "model.fema_disaster.disaster_report"
+[0m22:43:08.270023 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m22:43:08.272703 [debug] [Thread-1  ]: On model.fema_disaster.disaster_report: /* {"app": "dbt", "dbt_version": "1.6.3", "profile_name": "fema_disaster", "target_name": "dev", "node_id": "model.fema_disaster.disaster_report"} */
+
+
+  create or replace view `adeairflow`.`fema_disaster`.`disaster_report`
+  OPTIONS()
+  as 
+
+with disaster_record as (
+    select * from  fema_disaster.disasters
+)
+
+select disaster_number, disaster_year
+from disaster_record
+where disaster_number > 2000;
+
+
+[0m22:43:09.826882 [debug] [Thread-1  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=adeairflow&j=bq:US:e75e4f3c-8ac6-4479-b316-0555e755f3bf&page=queryresults
+[0m22:43:09.851550 [debug] [Thread-2  ]: Writing runtime sql for node "model.fema_disaster.my_first_dbt_model"
+[0m22:43:09.854174 [debug] [Thread-2  ]: On model.fema_disaster.my_first_dbt_model: /* {"app": "dbt", "dbt_version": "1.6.3", "profile_name": "fema_disaster", "target_name": "dev", "node_id": "model.fema_disaster.my_first_dbt_model"} */
+
+  
+    
+
+    create or replace table `adeairflow`.`fema_disaster`.`my_first_dbt_model`
+      
+    
+    
+
+    OPTIONS()
+    as (
+      /*
+    Welcome to your first dbt model!
+    Did you know that you can also configure models directly within SQL files?
+    This will override configurations stated in dbt_project.yml
+
+    Try changing "table" to "view" below
+*/
+
+
+
+with source_data as (
+
+    select 1 as id
+    union all
+    select null as id
+
+)
+
+select *
+from source_data
+
+/*
+    Uncomment the line below to remove records with null `id` values
+*/
+
+-- where id is not null
+    );
+  
+[0m22:43:10.839228 [debug] [Thread-2  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=adeairflow&j=bq:US:ac831cca-ce6d-431d-bd88-d8c5e28a6352&page=queryresults
+[0m22:43:10.854669 [debug] [Thread-1  ]: Timing info for model.fema_disaster.disaster_report (execute): 22:43:08.132754 => 22:43:10.854415
+[0m22:43:10.856310 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '74203da8-7182-4a12-842d-c97ba001700d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd368e75ac0>]}
+[0m22:43:10.858487 [info ] [Thread-1  ]: 1 of 3 OK created sql view model fema_disaster.disaster_report ................. [[32mCREATE VIEW (0 processed)[0m in 2.77s]
+[0m22:43:10.860406 [debug] [Thread-1  ]: Finished running node model.fema_disaster.disaster_report
+[0m22:43:13.420416 [debug] [Thread-2  ]: Timing info for model.fema_disaster.my_first_dbt_model (execute): 22:43:08.159884 => 22:43:13.420075
+[0m22:43:13.421791 [debug] [Thread-2  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '74203da8-7182-4a12-842d-c97ba001700d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd368e5ee80>]}
+[0m22:43:13.422884 [info ] [Thread-2  ]: 2 of 3 OK created sql table model fema_disaster.my_first_dbt_model ............. [[32mCREATE TABLE (2.0 rows, 0 processed)[0m in 5.31s]
+[0m22:43:13.423801 [debug] [Thread-2  ]: Finished running node model.fema_disaster.my_first_dbt_model
+[0m22:43:13.424908 [debug] [Thread-4  ]: Began running node model.fema_disaster.my_second_dbt_model
+[0m22:43:13.425623 [info ] [Thread-4  ]: 3 of 3 START sql view model fema_disaster.my_second_dbt_model .................. [RUN]
+[0m22:43:13.426911 [debug] [Thread-4  ]: Acquiring new bigquery connection 'model.fema_disaster.my_second_dbt_model'
+[0m22:43:13.427500 [debug] [Thread-4  ]: Began compiling node model.fema_disaster.my_second_dbt_model
+[0m22:43:13.431789 [debug] [Thread-4  ]: Writing injected SQL for node "model.fema_disaster.my_second_dbt_model"
+[0m22:43:13.433308 [debug] [Thread-4  ]: Timing info for model.fema_disaster.my_second_dbt_model (compile): 22:43:13.427898 => 22:43:13.432884
+[0m22:43:13.433923 [debug] [Thread-4  ]: Began executing node model.fema_disaster.my_second_dbt_model
+[0m22:43:13.438578 [debug] [Thread-4  ]: Writing runtime sql for node "model.fema_disaster.my_second_dbt_model"
+[0m22:43:13.440282 [debug] [Thread-4  ]: Opening a new connection, currently in state init
+[0m22:43:13.441518 [debug] [Thread-4  ]: On model.fema_disaster.my_second_dbt_model: /* {"app": "dbt", "dbt_version": "1.6.3", "profile_name": "fema_disaster", "target_name": "dev", "node_id": "model.fema_disaster.my_second_dbt_model"} */
+
+
+  create or replace view `adeairflow`.`fema_disaster`.`my_second_dbt_model`
+  OPTIONS()
+  as -- Use the `ref` function to select from other models
+
+select *
+from `adeairflow`.`fema_disaster`.`my_first_dbt_model`
+where id = 1;
+
+
+[0m22:43:15.361852 [debug] [Thread-4  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=adeairflow&j=bq:US:e1f63d37-96dd-4e76-891c-dc1628e50bc4&page=queryresults
+[0m22:43:17.372041 [debug] [Thread-4  ]: Timing info for model.fema_disaster.my_second_dbt_model (execute): 22:43:13.434287 => 22:43:17.371706
+[0m22:43:17.375179 [debug] [Thread-4  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '74203da8-7182-4a12-842d-c97ba001700d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd368ed7df0>]}
+[0m22:43:17.376360 [info ] [Thread-4  ]: 3 of 3 OK created sql view model fema_disaster.my_second_dbt_model ............. [[32mCREATE VIEW (0 processed)[0m in 3.95s]
+[0m22:43:17.377499 [debug] [Thread-4  ]: Finished running node model.fema_disaster.my_second_dbt_model
+[0m22:43:17.382314 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m22:43:17.382912 [debug] [MainThread]: Connection 'model.fema_disaster.disaster_report' was properly closed.
+[0m22:43:17.383745 [debug] [MainThread]: Connection 'model.fema_disaster.my_first_dbt_model' was properly closed.
+[0m22:43:17.384334 [debug] [MainThread]: Connection 'model.fema_disaster.my_second_dbt_model' was properly closed.
+[0m22:43:17.384986 [info ] [MainThread]: 
+[0m22:43:17.385570 [info ] [MainThread]: Finished running 2 view models, 1 table model in 0 hours 0 minutes and 15.58 seconds (15.58s).
+[0m22:43:17.387022 [debug] [MainThread]: Command end result
+[0m22:43:17.406921 [info ] [MainThread]: 
+[0m22:43:17.409666 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m22:43:17.410713 [info ] [MainThread]: 
+[0m22:43:17.411993 [info ] [MainThread]: Done. PASS=3 WARN=0 ERROR=0 SKIP=0 TOTAL=3
+[0m22:43:17.414681 [debug] [MainThread]: Command `dbt run` succeeded at 22:43:17.414479 after 22.37 seconds
+[0m22:43:17.415361 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd3622a2fa0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd368b4b550>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd368864fd0>]}
+[0m22:43:17.416135 [debug] [MainThread]: Flushing usage events
+[0m22:46:54.367432 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd9a1a9e130>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd9a36c17f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd9a36c1d60>]}
+
+
+============================== 22:46:54.375148 | d02fe814-681b-413c-97cc-ee2d0873a9fd ==============================
+[0m22:46:54.375148 [info ] [MainThread]: Running with dbt=1.6.3
+[0m22:46:54.376188 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'fail_fast': 'False', 'log_path': '/Users/semiubiliaminu/my_folder/microclick/altschool_project/final_capstone_project/fema_disaster_dbt/fema_disaster/logs', 'profiles_dir': '/Users/semiubiliaminu/.dbt', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt run', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m22:47:01.981966 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'd02fe814-681b-413c-97cc-ee2d0873a9fd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd9a7ff3d60>]}
+[0m22:47:01.996852 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'd02fe814-681b-413c-97cc-ee2d0873a9fd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd9a7fca850>]}
+[0m22:47:01.998522 [info ] [MainThread]: Registered adapter: bigquery=1.6.0
+[0m22:47:02.043538 [debug] [MainThread]: checksum: 800ab10c53db38b54e69cd328777f0c48b6374b8a89466e8ff54aa9acb452b75, vars: {}, profile: , target: , version: 1.6.3
+[0m22:47:02.184497 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m22:47:02.185291 [debug] [MainThread]: Partial parsing: updated file: fema_disaster://models/staging/disaster_report.sql
+[0m22:47:02.250860 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'd02fe814-681b-413c-97cc-ee2d0873a9fd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd9a82440d0>]}
+[0m22:47:02.285304 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'd02fe814-681b-413c-97cc-ee2d0873a9fd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd9a817b640>]}
+[0m22:47:02.286252 [info ] [MainThread]: Found 3 models, 4 tests, 0 sources, 0 exposures, 0 metrics, 390 macros, 0 groups, 0 semantic models
+[0m22:47:02.286885 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'd02fe814-681b-413c-97cc-ee2d0873a9fd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd9a817b850>]}
+[0m22:47:02.289360 [info ] [MainThread]: 
+[0m22:47:02.290654 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m22:47:02.292241 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_adeairflow'
+[0m22:47:02.293003 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m22:47:07.133875 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_adeairflow, now list_adeairflow_fema_disaster)
+[0m22:47:07.135158 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m22:47:09.133537 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'd02fe814-681b-413c-97cc-ee2d0873a9fd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd9a804a4c0>]}
+[0m22:47:09.135509 [info ] [MainThread]: Concurrency: 60 threads (target='dev')
+[0m22:47:09.136288 [info ] [MainThread]: 
+[0m22:47:09.148991 [debug] [Thread-1  ]: Began running node model.fema_disaster.disaster_report
+[0m22:47:09.149726 [debug] [Thread-2  ]: Began running node model.fema_disaster.my_first_dbt_model
+[0m22:47:09.150651 [info ] [Thread-1  ]: 1 of 3 START sql table model fema_disaster.disaster_report ..................... [RUN]
+[0m22:47:09.151723 [info ] [Thread-2  ]: 2 of 3 START sql table model fema_disaster.my_first_dbt_model .................. [RUN]
+[0m22:47:09.153860 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly list_adeairflow_fema_disaster, now model.fema_disaster.disaster_report)
+[0m22:47:09.155857 [debug] [Thread-2  ]: Acquiring new bigquery connection 'model.fema_disaster.my_first_dbt_model'
+[0m22:47:09.159626 [debug] [Thread-2  ]: Began compiling node model.fema_disaster.my_first_dbt_model
+[0m22:47:09.157682 [debug] [Thread-1  ]: Began compiling node model.fema_disaster.disaster_report
+[0m22:47:09.175861 [debug] [Thread-2  ]: Writing injected SQL for node "model.fema_disaster.my_first_dbt_model"
+[0m22:47:09.180901 [debug] [Thread-1  ]: Writing injected SQL for node "model.fema_disaster.disaster_report"
+[0m22:47:09.184072 [debug] [Thread-2  ]: Timing info for model.fema_disaster.my_first_dbt_model (compile): 22:47:09.160127 => 22:47:09.183675
+[0m22:47:09.184778 [debug] [Thread-2  ]: Began executing node model.fema_disaster.my_first_dbt_model
+[0m22:47:09.210139 [debug] [Thread-1  ]: Timing info for model.fema_disaster.disaster_report (compile): 22:47:09.176358 => 22:47:09.209713
+[0m22:47:09.218189 [debug] [Thread-2  ]: Opening a new connection, currently in state init
+[0m22:47:09.218756 [debug] [Thread-1  ]: Began executing node model.fema_disaster.disaster_report
+[0m22:47:09.222888 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m22:47:10.857917 [debug] [Thread-2  ]: Writing runtime sql for node "model.fema_disaster.my_first_dbt_model"
+[0m22:47:10.859582 [debug] [Thread-2  ]: On model.fema_disaster.my_first_dbt_model: /* {"app": "dbt", "dbt_version": "1.6.3", "profile_name": "fema_disaster", "target_name": "dev", "node_id": "model.fema_disaster.my_first_dbt_model"} */
+
+  
+    
+
+    create or replace table `adeairflow`.`fema_disaster`.`my_first_dbt_model`
+      
+    
+    
+
+    OPTIONS()
+    as (
+      /*
+    Welcome to your first dbt model!
+    Did you know that you can also configure models directly within SQL files?
+    This will override configurations stated in dbt_project.yml
+
+    Try changing "table" to "view" below
+*/
+
+
+
+with source_data as (
+
+    select 1 as id
+    union all
+    select null as id
+
+)
+
+select *
+from source_data
+
+/*
+    Uncomment the line below to remove records with null `id` values
+*/
+
+-- where id is not null
+    );
+  
+[0m22:47:11.811128 [debug] [Thread-1  ]: Writing runtime sql for node "model.fema_disaster.disaster_report"
+[0m22:47:11.812115 [debug] [Thread-2  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=adeairflow&j=bq:US:77d72f9b-dd26-4784-ac4c-fe413af86b0d&page=queryresults
+[0m22:47:11.814910 [debug] [Thread-1  ]: On model.fema_disaster.disaster_report: /* {"app": "dbt", "dbt_version": "1.6.3", "profile_name": "fema_disaster", "target_name": "dev", "node_id": "model.fema_disaster.disaster_report"} */
+
+  
+    
+
+    create or replace table `adeairflow`.`fema_disaster`.`disaster_report`
+      
+    
+    
+
+    OPTIONS()
+    as (
+      
+
+with disaster_record as (
+    select * from  fema_disaster.disasters
+)
+
+select disaster_number, disaster_year
+from disaster_record
+group by disaster_year
+order by disaster_year asc
+    );
+  
+[0m22:47:12.807065 [debug] [Thread-1  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=adeairflow&j=bq:US:e5132b76-07f2-4e6b-af51-e48dede8964a&page=queryresults
+[0m22:47:13.825120 [debug] [Thread-1  ]: BigQuery adapter: Retry attempt 1 of 1 after error: BadRequest('SELECT list expression references column disaster_number which is neither grouped nor aggregated at [19:8]')
+[0m22:47:14.864036 [debug] [Thread-1  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=adeairflow&j=bq:US:dbbf51d1-5d99-4abf-835e-aea539c68e93&page=queryresults
+[0m22:47:14.879296 [debug] [Thread-2  ]: Timing info for model.fema_disaster.my_first_dbt_model (execute): 22:47:09.185220 => 22:47:14.879045
+[0m22:47:14.880830 [debug] [Thread-2  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'd02fe814-681b-413c-97cc-ee2d0873a9fd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd9a851cb50>]}
+[0m22:47:14.883622 [info ] [Thread-2  ]: 2 of 3 OK created sql table model fema_disaster.my_first_dbt_model ............. [[32mCREATE TABLE (2.0 rows, 0 processed)[0m in 5.73s]
+[0m22:47:14.885295 [debug] [Thread-2  ]: Finished running node model.fema_disaster.my_first_dbt_model
+[0m22:47:14.886556 [debug] [Thread-4  ]: Began running node model.fema_disaster.my_second_dbt_model
+[0m22:47:14.887305 [info ] [Thread-4  ]: 3 of 3 START sql view model fema_disaster.my_second_dbt_model .................. [RUN]
+[0m22:47:14.888518 [debug] [Thread-4  ]: Acquiring new bigquery connection 'model.fema_disaster.my_second_dbt_model'
+[0m22:47:14.890097 [debug] [Thread-4  ]: Began compiling node model.fema_disaster.my_second_dbt_model
+[0m22:47:14.894192 [debug] [Thread-4  ]: Writing injected SQL for node "model.fema_disaster.my_second_dbt_model"
+[0m22:47:14.902143 [debug] [Thread-4  ]: Timing info for model.fema_disaster.my_second_dbt_model (compile): 22:47:14.890931 => 22:47:14.901776
+[0m22:47:14.903512 [debug] [Thread-4  ]: Began executing node model.fema_disaster.my_second_dbt_model
+[0m22:47:14.936818 [debug] [Thread-4  ]: Writing runtime sql for node "model.fema_disaster.my_second_dbt_model"
+[0m22:47:14.938954 [debug] [Thread-4  ]: Opening a new connection, currently in state init
+[0m22:47:14.940247 [debug] [Thread-4  ]: On model.fema_disaster.my_second_dbt_model: /* {"app": "dbt", "dbt_version": "1.6.3", "profile_name": "fema_disaster", "target_name": "dev", "node_id": "model.fema_disaster.my_second_dbt_model"} */
+
+
+  create or replace view `adeairflow`.`fema_disaster`.`my_second_dbt_model`
+  OPTIONS()
+  as -- Use the `ref` function to select from other models
+
+select *
+from `adeairflow`.`fema_disaster`.`my_first_dbt_model`
+where id = 1;
+
+
+[0m22:47:16.028097 [error] [Thread-1  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=adeairflow&j=bq:US:dbbf51d1-5d99-4abf-835e-aea539c68e93&page=queryresults
+[0m22:47:16.029815 [debug] [Thread-1  ]: Timing info for model.fema_disaster.disaster_report (execute): 22:47:09.219700 => 22:47:16.029275
+[0m22:47:16.057843 [debug] [Thread-1  ]: Database Error in model disaster_report (models/staging/disaster_report.sql)
+  SELECT list expression references column disaster_number which is neither grouped nor aggregated at [19:8]
+  compiled Code at target/run/fema_disaster/models/staging/disaster_report.sql
+[0m22:47:16.059641 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'd02fe814-681b-413c-97cc-ee2d0873a9fd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd9a80480d0>]}
+[0m22:47:16.061222 [error] [Thread-1  ]: 1 of 3 ERROR creating sql table model fema_disaster.disaster_report ............ [[31mERROR[0m in 6.91s]
+[0m22:47:16.062170 [debug] [Thread-1  ]: Finished running node model.fema_disaster.disaster_report
+[0m22:47:16.460332 [debug] [Thread-4  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=adeairflow&j=bq:US:059a1eef-2852-4878-b0f6-e5866434e35a&page=queryresults
+[0m22:47:17.663960 [debug] [Thread-4  ]: Timing info for model.fema_disaster.my_second_dbt_model (execute): 22:47:14.904142 => 22:47:17.663448
+[0m22:47:17.668671 [debug] [Thread-4  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'd02fe814-681b-413c-97cc-ee2d0873a9fd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd9a8531310>]}
+[0m22:47:17.671950 [info ] [Thread-4  ]: 3 of 3 OK created sql view model fema_disaster.my_second_dbt_model ............. [[32mCREATE VIEW (0 processed)[0m in 2.78s]
+[0m22:47:17.675376 [debug] [Thread-4  ]: Finished running node model.fema_disaster.my_second_dbt_model
+[0m22:47:17.717230 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m22:47:17.718070 [debug] [MainThread]: Connection 'model.fema_disaster.disaster_report' was properly closed.
+[0m22:47:17.719057 [debug] [MainThread]: Connection 'model.fema_disaster.my_first_dbt_model' was properly closed.
+[0m22:47:17.719593 [debug] [MainThread]: Connection 'model.fema_disaster.my_second_dbt_model' was properly closed.
+[0m22:47:17.720134 [info ] [MainThread]: 
+[0m22:47:17.721861 [info ] [MainThread]: Finished running 2 table models, 1 view model in 0 hours 0 minutes and 15.43 seconds (15.43s).
+[0m22:47:17.723665 [debug] [MainThread]: Command end result
+[0m22:47:17.753950 [info ] [MainThread]: 
+[0m22:47:17.755561 [info ] [MainThread]: [31mCompleted with 1 error and 0 warnings:[0m
+[0m22:47:17.756277 [info ] [MainThread]: 
+[0m22:47:17.756906 [error] [MainThread]:   Database Error in model disaster_report (models/staging/disaster_report.sql)
+  SELECT list expression references column disaster_number which is neither grouped nor aggregated at [19:8]
+  compiled Code at target/run/fema_disaster/models/staging/disaster_report.sql
+[0m22:47:17.757453 [info ] [MainThread]: 
+[0m22:47:17.757992 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=1 SKIP=0 TOTAL=3
+[0m22:47:17.758969 [debug] [MainThread]: Command `dbt run` failed at 22:47:17.758833 after 23.42 seconds
+[0m22:47:17.759522 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd9a1a9e130>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd9a7fca850>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd9a8031d90>]}
+[0m22:47:17.760041 [debug] [MainThread]: Flushing usage events
+[0m22:47:57.091650 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f790e299130>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f790ffc17f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f790ffc1d60>]}
+
+
+============================== 22:47:57.106153 | 30155bb3-309d-4f4e-bc9c-bad584def2a5 ==============================
+[0m22:47:57.106153 [info ] [MainThread]: Running with dbt=1.6.3
+[0m22:47:57.107397 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/semiubiliaminu/.dbt', 'debug': 'False', 'warn_error': 'None', 'log_path': '/Users/semiubiliaminu/my_folder/microclick/altschool_project/final_capstone_project/fema_disaster_dbt/fema_disaster/logs', 'version_check': 'True', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt run', 'introspect': 'True', 'log_format': 'default', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m22:48:05.107340 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '30155bb3-309d-4f4e-bc9c-bad584def2a5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7914804d60>]}
+[0m22:48:05.120303 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '30155bb3-309d-4f4e-bc9c-bad584def2a5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f79147db850>]}
+[0m22:48:05.122015 [info ] [MainThread]: Registered adapter: bigquery=1.6.0
+[0m22:48:05.165359 [debug] [MainThread]: checksum: 800ab10c53db38b54e69cd328777f0c48b6374b8a89466e8ff54aa9acb452b75, vars: {}, profile: , target: , version: 1.6.3
+[0m22:48:05.418846 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m22:48:05.419668 [debug] [MainThread]: Partial parsing: updated file: fema_disaster://models/staging/disaster_report.sql
+[0m22:48:05.484884 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '30155bb3-309d-4f4e-bc9c-bad584def2a5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7914a540d0>]}
+[0m22:48:05.518972 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '30155bb3-309d-4f4e-bc9c-bad584def2a5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7914991640>]}
+[0m22:48:05.519764 [info ] [MainThread]: Found 3 models, 4 tests, 0 sources, 0 exposures, 0 metrics, 390 macros, 0 groups, 0 semantic models
+[0m22:48:05.520494 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '30155bb3-309d-4f4e-bc9c-bad584def2a5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7914991850>]}
+[0m22:48:05.522420 [info ] [MainThread]: 
+[0m22:48:05.523428 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m22:48:05.524858 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_adeairflow'
+[0m22:48:05.525505 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m22:48:10.825939 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_adeairflow, now list_adeairflow_fema_disaster)
+[0m22:48:10.827117 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m22:48:12.361108 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '30155bb3-309d-4f4e-bc9c-bad584def2a5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f791485a4c0>]}
+[0m22:48:12.362695 [info ] [MainThread]: Concurrency: 60 threads (target='dev')
+[0m22:48:12.363473 [info ] [MainThread]: 
+[0m22:48:12.375634 [debug] [Thread-1  ]: Began running node model.fema_disaster.disaster_report
+[0m22:48:12.376283 [debug] [Thread-2  ]: Began running node model.fema_disaster.my_first_dbt_model
+[0m22:48:12.377087 [info ] [Thread-1  ]: 1 of 3 START sql table model fema_disaster.disaster_report ..................... [RUN]
+[0m22:48:12.377870 [info ] [Thread-2  ]: 2 of 3 START sql table model fema_disaster.my_first_dbt_model .................. [RUN]
+[0m22:48:12.379050 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly list_adeairflow_fema_disaster, now model.fema_disaster.disaster_report)
+[0m22:48:12.380547 [debug] [Thread-2  ]: Acquiring new bigquery connection 'model.fema_disaster.my_first_dbt_model'
+[0m22:48:12.381217 [debug] [Thread-1  ]: Began compiling node model.fema_disaster.disaster_report
+[0m22:48:12.381852 [debug] [Thread-2  ]: Began compiling node model.fema_disaster.my_first_dbt_model
+[0m22:48:12.399122 [debug] [Thread-2  ]: Writing injected SQL for node "model.fema_disaster.my_first_dbt_model"
+[0m22:48:12.403604 [debug] [Thread-1  ]: Writing injected SQL for node "model.fema_disaster.disaster_report"
+[0m22:48:12.408067 [debug] [Thread-2  ]: Timing info for model.fema_disaster.my_first_dbt_model (compile): 22:48:12.393469 => 22:48:12.406725
+[0m22:48:12.408829 [debug] [Thread-1  ]: Timing info for model.fema_disaster.disaster_report (compile): 22:48:12.382318 => 22:48:12.408473
+[0m22:48:12.409556 [debug] [Thread-2  ]: Began executing node model.fema_disaster.my_first_dbt_model
+[0m22:48:12.410097 [debug] [Thread-1  ]: Began executing node model.fema_disaster.disaster_report
+[0m22:48:12.455343 [debug] [Thread-2  ]: Opening a new connection, currently in state init
+[0m22:48:12.486225 [debug] [Thread-1  ]: Writing runtime sql for node "model.fema_disaster.disaster_report"
+[0m22:48:12.489212 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m22:48:12.489833 [debug] [Thread-1  ]: On model.fema_disaster.disaster_report: /* {"app": "dbt", "dbt_version": "1.6.3", "profile_name": "fema_disaster", "target_name": "dev", "node_id": "model.fema_disaster.disaster_report"} */
+
+  
+    
+
+    create or replace table `adeairflow`.`fema_disaster`.`disaster_report`
+      
+    
+    
+
+    OPTIONS()
+    as (
+      
+
+with disaster_record as (
+    select * from  fema_disaster.disasters
+)
+
+select disaster_number, disaster_year
+from disaster_record
+group by disaster_year, disaster_number
+order by disaster_year asc
+    );
+  
+[0m22:48:13.814578 [debug] [Thread-2  ]: Writing runtime sql for node "model.fema_disaster.my_first_dbt_model"
+[0m22:48:13.815881 [debug] [Thread-1  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=adeairflow&j=bq:US:d7fd1314-6542-4d6b-9461-1e6843785134&page=queryresults
+[0m22:48:13.818184 [debug] [Thread-2  ]: On model.fema_disaster.my_first_dbt_model: /* {"app": "dbt", "dbt_version": "1.6.3", "profile_name": "fema_disaster", "target_name": "dev", "node_id": "model.fema_disaster.my_first_dbt_model"} */
+
+  
+    
+
+    create or replace table `adeairflow`.`fema_disaster`.`my_first_dbt_model`
+      
+    
+    
+
+    OPTIONS()
+    as (
+      /*
+    Welcome to your first dbt model!
+    Did you know that you can also configure models directly within SQL files?
+    This will override configurations stated in dbt_project.yml
+
+    Try changing "table" to "view" below
+*/
+
+
+
+with source_data as (
+
+    select 1 as id
+    union all
+    select null as id
+
+)
+
+select *
+from source_data
+
+/*
+    Uncomment the line below to remove records with null `id` values
+*/
+
+-- where id is not null
+    );
+  
+[0m22:48:14.465433 [debug] [Thread-2  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=adeairflow&j=bq:US:b2c205c8-978a-404b-80a6-80c3e4b4b5c1&page=queryresults
+[0m22:48:17.049896 [debug] [Thread-1  ]: Timing info for model.fema_disaster.disaster_report (execute): 22:48:12.417883 => 22:48:17.049626
+[0m22:48:17.051445 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '30155bb3-309d-4f4e-bc9c-bad584def2a5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7914d55e20>]}
+[0m22:48:17.053502 [info ] [Thread-1  ]: 1 of 3 OK created sql table model fema_disaster.disaster_report ................ [[32mCREATE TABLE (30.0 rows, 7.0 KiB processed)[0m in 4.67s]
+[0m22:48:17.055264 [debug] [Thread-1  ]: Finished running node model.fema_disaster.disaster_report
+[0m22:48:17.701965 [debug] [Thread-2  ]: Timing info for model.fema_disaster.my_first_dbt_model (execute): 22:48:12.410463 => 22:48:17.701606
+[0m22:48:17.703330 [debug] [Thread-2  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '30155bb3-309d-4f4e-bc9c-bad584def2a5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7914cebe20>]}
+[0m22:48:17.704311 [info ] [Thread-2  ]: 2 of 3 OK created sql table model fema_disaster.my_first_dbt_model ............. [[32mCREATE TABLE (2.0 rows, 0 processed)[0m in 5.32s]
+[0m22:48:17.705251 [debug] [Thread-2  ]: Finished running node model.fema_disaster.my_first_dbt_model
+[0m22:48:17.706372 [debug] [Thread-4  ]: Began running node model.fema_disaster.my_second_dbt_model
+[0m22:48:17.707222 [info ] [Thread-4  ]: 3 of 3 START sql view model fema_disaster.my_second_dbt_model .................. [RUN]
+[0m22:48:17.708349 [debug] [Thread-4  ]: Acquiring new bigquery connection 'model.fema_disaster.my_second_dbt_model'
+[0m22:48:17.708937 [debug] [Thread-4  ]: Began compiling node model.fema_disaster.my_second_dbt_model
+[0m22:48:17.713822 [debug] [Thread-4  ]: Writing injected SQL for node "model.fema_disaster.my_second_dbt_model"
+[0m22:48:17.715360 [debug] [Thread-4  ]: Timing info for model.fema_disaster.my_second_dbt_model (compile): 22:48:17.709432 => 22:48:17.715005
+[0m22:48:17.715946 [debug] [Thread-4  ]: Began executing node model.fema_disaster.my_second_dbt_model
+[0m22:48:17.749271 [debug] [Thread-4  ]: Writing runtime sql for node "model.fema_disaster.my_second_dbt_model"
+[0m22:48:17.750535 [debug] [Thread-4  ]: Opening a new connection, currently in state init
+[0m22:48:17.751181 [debug] [Thread-4  ]: On model.fema_disaster.my_second_dbt_model: /* {"app": "dbt", "dbt_version": "1.6.3", "profile_name": "fema_disaster", "target_name": "dev", "node_id": "model.fema_disaster.my_second_dbt_model"} */
+
+
+  create or replace view `adeairflow`.`fema_disaster`.`my_second_dbt_model`
+  OPTIONS()
+  as -- Use the `ref` function to select from other models
+
+select *
+from `adeairflow`.`fema_disaster`.`my_first_dbt_model`
+where id = 1;
+
+
+[0m22:48:19.259188 [debug] [Thread-4  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=adeairflow&j=bq:US:f711de6f-007c-4ed7-a6e6-0803eb2c597b&page=queryresults
+[0m22:48:20.375930 [debug] [Thread-4  ]: Timing info for model.fema_disaster.my_second_dbt_model (execute): 22:48:17.716394 => 22:48:20.375590
+[0m22:48:20.377325 [debug] [Thread-4  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '30155bb3-309d-4f4e-bc9c-bad584def2a5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7914d89f70>]}
+[0m22:48:20.378550 [info ] [Thread-4  ]: 3 of 3 OK created sql view model fema_disaster.my_second_dbt_model ............. [[32mCREATE VIEW (0 processed)[0m in 2.67s]
+[0m22:48:20.379687 [debug] [Thread-4  ]: Finished running node model.fema_disaster.my_second_dbt_model
+[0m22:48:20.384558 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m22:48:20.385401 [debug] [MainThread]: Connection 'model.fema_disaster.disaster_report' was properly closed.
+[0m22:48:20.385935 [debug] [MainThread]: Connection 'model.fema_disaster.my_first_dbt_model' was properly closed.
+[0m22:48:20.386898 [debug] [MainThread]: Connection 'model.fema_disaster.my_second_dbt_model' was properly closed.
+[0m22:48:20.387795 [info ] [MainThread]: 
+[0m22:48:20.388443 [info ] [MainThread]: Finished running 2 table models, 1 view model in 0 hours 0 minutes and 14.86 seconds (14.86s).
+[0m22:48:20.389863 [debug] [MainThread]: Command end result
+[0m22:48:20.407403 [info ] [MainThread]: 
+[0m22:48:20.408314 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m22:48:20.408874 [info ] [MainThread]: 
+[0m22:48:20.409745 [info ] [MainThread]: Done. PASS=3 WARN=0 ERROR=0 SKIP=0 TOTAL=3
+[0m22:48:20.411002 [debug] [MainThread]: Command `dbt run` succeeded at 22:48:20.410799 after 23.37 seconds
+[0m22:48:20.411876 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f790e299130>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f79149b05e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7914a00640>]}
+[0m22:48:20.412624 [debug] [MainThread]: Flushing usage events
+[0m22:51:11.882182 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f943729f130>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9438fd57f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9438fd5d60>]}
+
+
+============================== 22:51:11.892815 | 47a8f917-7685-4647-90ea-8651fcc0523e ==============================
+[0m22:51:11.892815 [info ] [MainThread]: Running with dbt=1.6.3
+[0m22:51:11.894171 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'debug': 'False', 'log_path': '/Users/semiubiliaminu/my_folder/microclick/altschool_project/final_capstone_project/fema_disaster_dbt/fema_disaster/logs', 'version_check': 'True', 'profiles_dir': '/Users/semiubiliaminu/.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt run', 'log_format': 'default', 'static_parser': 'True', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m22:51:18.789711 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '47a8f917-7685-4647-90ea-8651fcc0523e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f943cff3d60>]}
+[0m22:51:18.805159 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '47a8f917-7685-4647-90ea-8651fcc0523e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f943d8245b0>]}
+[0m22:51:18.806826 [info ] [MainThread]: Registered adapter: bigquery=1.6.0
+[0m22:51:18.835986 [debug] [MainThread]: checksum: 800ab10c53db38b54e69cd328777f0c48b6374b8a89466e8ff54aa9acb452b75, vars: {}, profile: , target: , version: 1.6.3
+[0m22:51:19.012091 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m22:51:19.012916 [debug] [MainThread]: Partial parsing: updated file: fema_disaster://models/staging/disaster_report.sql
+[0m22:51:19.085120 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '47a8f917-7685-4647-90ea-8651fcc0523e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f943da440d0>]}
+[0m22:51:19.115988 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '47a8f917-7685-4647-90ea-8651fcc0523e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f943d987670>]}
+[0m22:51:19.116940 [info ] [MainThread]: Found 3 models, 4 tests, 0 sources, 0 exposures, 0 metrics, 390 macros, 0 groups, 0 semantic models
+[0m22:51:19.117563 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '47a8f917-7685-4647-90ea-8651fcc0523e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f943d9878b0>]}
+[0m22:51:19.119745 [info ] [MainThread]: 
+[0m22:51:19.121032 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m22:51:19.122959 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_adeairflow'
+[0m22:51:19.124182 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m22:51:24.963995 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_adeairflow, now list_adeairflow_fema_disaster)
+[0m22:51:24.965189 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m22:51:26.004438 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '47a8f917-7685-4647-90ea-8651fcc0523e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f943d830c10>]}
+[0m22:51:26.005923 [info ] [MainThread]: Concurrency: 60 threads (target='dev')
+[0m22:51:26.006575 [info ] [MainThread]: 
+[0m22:51:26.016506 [debug] [Thread-1  ]: Began running node model.fema_disaster.disaster_report
+[0m22:51:26.017128 [debug] [Thread-2  ]: Began running node model.fema_disaster.my_first_dbt_model
+[0m22:51:26.017796 [info ] [Thread-1  ]: 1 of 3 START sql table model fema_disaster.disaster_report ..................... [RUN]
+[0m22:51:26.018547 [info ] [Thread-2  ]: 2 of 3 START sql table model fema_disaster.my_first_dbt_model .................. [RUN]
+[0m22:51:26.019479 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly list_adeairflow_fema_disaster, now model.fema_disaster.disaster_report)
+[0m22:51:26.020453 [debug] [Thread-2  ]: Acquiring new bigquery connection 'model.fema_disaster.my_first_dbt_model'
+[0m22:51:26.021007 [debug] [Thread-1  ]: Began compiling node model.fema_disaster.disaster_report
+[0m22:51:26.021486 [debug] [Thread-2  ]: Began compiling node model.fema_disaster.my_first_dbt_model
+[0m22:51:26.032308 [debug] [Thread-1  ]: Writing injected SQL for node "model.fema_disaster.disaster_report"
+[0m22:51:26.037635 [debug] [Thread-2  ]: Writing injected SQL for node "model.fema_disaster.my_first_dbt_model"
+[0m22:51:26.039416 [debug] [Thread-1  ]: Timing info for model.fema_disaster.disaster_report (compile): 22:51:26.021854 => 22:51:26.038832
+[0m22:51:26.040945 [debug] [Thread-2  ]: Timing info for model.fema_disaster.my_first_dbt_model (compile): 22:51:26.033078 => 22:51:26.040441
+[0m22:51:26.042116 [debug] [Thread-1  ]: Began executing node model.fema_disaster.disaster_report
+[0m22:51:26.042923 [debug] [Thread-2  ]: Began executing node model.fema_disaster.my_first_dbt_model
+[0m22:51:26.092361 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m22:51:26.095997 [debug] [Thread-2  ]: Opening a new connection, currently in state init
+[0m22:51:27.128038 [debug] [Thread-1  ]: Writing runtime sql for node "model.fema_disaster.disaster_report"
+[0m22:51:27.129242 [debug] [Thread-1  ]: On model.fema_disaster.disaster_report: /* {"app": "dbt", "dbt_version": "1.6.3", "profile_name": "fema_disaster", "target_name": "dev", "node_id": "model.fema_disaster.disaster_report"} */
+
+  
+    
+
+    create or replace table `adeairflow`.`fema_disaster`.`disaster_report`
+      
+    
+    
+
+    OPTIONS()
+    as (
+      
+
+with disaster_record as (
+    select * from  fema_disaster.disasters
+)
+
+select count(disaster_number) as no_of_disaster, disaster_number, disaster_year
+from disaster_record
+group by disaster_year, disaster_number
+order by disaster_year asc
+    );
+  
+[0m22:51:27.308736 [debug] [Thread-2  ]: Writing runtime sql for node "model.fema_disaster.my_first_dbt_model"
+[0m22:51:27.310164 [debug] [Thread-2  ]: On model.fema_disaster.my_first_dbt_model: /* {"app": "dbt", "dbt_version": "1.6.3", "profile_name": "fema_disaster", "target_name": "dev", "node_id": "model.fema_disaster.my_first_dbt_model"} */
+
+  
+    
+
+    create or replace table `adeairflow`.`fema_disaster`.`my_first_dbt_model`
+      
+    
+    
+
+    OPTIONS()
+    as (
+      /*
+    Welcome to your first dbt model!
+    Did you know that you can also configure models directly within SQL files?
+    This will override configurations stated in dbt_project.yml
+
+    Try changing "table" to "view" below
+*/
+
+
+
+with source_data as (
+
+    select 1 as id
+    union all
+    select null as id
+
+)
+
+select *
+from source_data
+
+/*
+    Uncomment the line below to remove records with null `id` values
+*/
+
+-- where id is not null
+    );
+  
+[0m22:51:27.917067 [debug] [Thread-1  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=adeairflow&j=bq:US:c8531201-26a0-4933-a330-45aae417ac23&page=queryresults
+[0m22:51:28.139945 [debug] [Thread-2  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=adeairflow&j=bq:US:b4c57bcb-364e-4190-8b13-d0debc9a419c&page=queryresults
+[0m22:51:30.558295 [debug] [Thread-1  ]: Timing info for model.fema_disaster.disaster_report (execute): 22:51:26.043861 => 22:51:30.557978
+[0m22:51:30.559436 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '47a8f917-7685-4647-90ea-8651fcc0523e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f943dd33af0>]}
+[0m22:51:30.561081 [info ] [Thread-1  ]: 1 of 3 OK created sql table model fema_disaster.disaster_report ................ [[32mCREATE TABLE (30.0 rows, 7.0 KiB processed)[0m in 4.54s]
+[0m22:51:30.562545 [debug] [Thread-1  ]: Finished running node model.fema_disaster.disaster_report
+[0m22:51:30.716030 [debug] [Thread-2  ]: Timing info for model.fema_disaster.my_first_dbt_model (execute): 22:51:26.056193 => 22:51:30.715692
+[0m22:51:30.717362 [debug] [Thread-2  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '47a8f917-7685-4647-90ea-8651fcc0523e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f943dcdcdc0>]}
+[0m22:51:30.718397 [info ] [Thread-2  ]: 2 of 3 OK created sql table model fema_disaster.my_first_dbt_model ............. [[32mCREATE TABLE (2.0 rows, 0 processed)[0m in 4.70s]
+[0m22:51:30.719526 [debug] [Thread-2  ]: Finished running node model.fema_disaster.my_first_dbt_model
+[0m22:51:30.720714 [debug] [Thread-4  ]: Began running node model.fema_disaster.my_second_dbt_model
+[0m22:51:30.721810 [info ] [Thread-4  ]: 3 of 3 START sql view model fema_disaster.my_second_dbt_model .................. [RUN]
+[0m22:51:30.723199 [debug] [Thread-4  ]: Acquiring new bigquery connection 'model.fema_disaster.my_second_dbt_model'
+[0m22:51:30.723802 [debug] [Thread-4  ]: Began compiling node model.fema_disaster.my_second_dbt_model
+[0m22:51:30.728274 [debug] [Thread-4  ]: Writing injected SQL for node "model.fema_disaster.my_second_dbt_model"
+[0m22:51:30.731374 [debug] [Thread-4  ]: Timing info for model.fema_disaster.my_second_dbt_model (compile): 22:51:30.724207 => 22:51:30.730976
+[0m22:51:30.731972 [debug] [Thread-4  ]: Began executing node model.fema_disaster.my_second_dbt_model
+[0m22:51:30.766550 [debug] [Thread-4  ]: Writing runtime sql for node "model.fema_disaster.my_second_dbt_model"
+[0m22:51:30.768382 [debug] [Thread-4  ]: Opening a new connection, currently in state init
+[0m22:51:30.769055 [debug] [Thread-4  ]: On model.fema_disaster.my_second_dbt_model: /* {"app": "dbt", "dbt_version": "1.6.3", "profile_name": "fema_disaster", "target_name": "dev", "node_id": "model.fema_disaster.my_second_dbt_model"} */
+
+
+  create or replace view `adeairflow`.`fema_disaster`.`my_second_dbt_model`
+  OPTIONS()
+  as -- Use the `ref` function to select from other models
+
+select *
+from `adeairflow`.`fema_disaster`.`my_first_dbt_model`
+where id = 1;
+
+
+[0m22:51:31.941408 [debug] [Thread-4  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=adeairflow&j=bq:US:b8215bf7-e1c7-47e1-bb7d-d9751688b445&page=queryresults
+[0m22:51:32.918312 [debug] [Thread-4  ]: Timing info for model.fema_disaster.my_second_dbt_model (execute): 22:51:30.732329 => 22:51:32.917829
+[0m22:51:32.919885 [debug] [Thread-4  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '47a8f917-7685-4647-90ea-8651fcc0523e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f943dcdcf40>]}
+[0m22:51:32.921302 [info ] [Thread-4  ]: 3 of 3 OK created sql view model fema_disaster.my_second_dbt_model ............. [[32mCREATE VIEW (0 processed)[0m in 2.20s]
+[0m22:51:32.949871 [debug] [Thread-4  ]: Finished running node model.fema_disaster.my_second_dbt_model
+[0m22:51:32.957501 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m22:51:32.959378 [debug] [MainThread]: Connection 'model.fema_disaster.disaster_report' was properly closed.
+[0m22:51:32.960061 [debug] [MainThread]: Connection 'model.fema_disaster.my_first_dbt_model' was properly closed.
+[0m22:51:32.960509 [debug] [MainThread]: Connection 'model.fema_disaster.my_second_dbt_model' was properly closed.
+[0m22:51:32.961019 [info ] [MainThread]: 
+[0m22:51:32.961740 [info ] [MainThread]: Finished running 2 table models, 1 view model in 0 hours 0 minutes and 13.84 seconds (13.84s).
+[0m22:51:32.963535 [debug] [MainThread]: Command end result
+[0m22:51:32.998647 [info ] [MainThread]: 
+[0m22:51:33.000988 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m22:51:33.002023 [info ] [MainThread]: 
+[0m22:51:33.003187 [info ] [MainThread]: Done. PASS=3 WARN=0 ERROR=0 SKIP=0 TOTAL=3
+[0m22:51:33.004692 [debug] [MainThread]: Command `dbt run` succeeded at 22:51:33.004505 after 21.18 seconds
+[0m22:51:33.005699 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f943729f130>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f943d9ee640>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f943d824fd0>]}
+[0m22:51:33.006955 [debug] [MainThread]: Flushing usage events
